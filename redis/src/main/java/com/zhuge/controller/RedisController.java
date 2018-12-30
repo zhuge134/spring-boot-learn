@@ -23,6 +23,17 @@ public class RedisController {
     @Autowired
     private RedisDao redisDao;
 
+    @RequestMapping(path = "/publish", method = RequestMethod.POST)
+    public String publish(@RequestParam("channel") String channel,
+                          @RequestParam("msg") String msg) {
+        try {
+            redisDao.publish(channel, msg);
+            return "success!";
+        } catch (Exception e) {
+            return "failed!";
+        }
+    }
+
     @RequestMapping(path = "/setValue", method = RequestMethod.POST)
     public String setValue(@RequestParam("key") String key,
                            @RequestParam("value") String value) {

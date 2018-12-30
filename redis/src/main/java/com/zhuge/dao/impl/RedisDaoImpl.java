@@ -23,4 +23,9 @@ public class RedisDaoImpl implements RedisDao {
         ValueOperations<String, String> ops = redisTemplate.opsForValue();
         return ops.get(key);
     }
+
+    @Override
+    public void publish(String channel, String msg) {
+        redisTemplate.convertAndSend(channel, msg);
+    }
 }
