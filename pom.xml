@@ -11,6 +11,7 @@
     <modules>
         <module>mybatis</module>
         <module>mybatis-generator</module>
+        <module>redis</module>
     </modules>
 
     <properties>
@@ -21,6 +22,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
@@ -51,6 +58,12 @@
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
