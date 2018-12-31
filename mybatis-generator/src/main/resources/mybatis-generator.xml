@@ -36,7 +36,8 @@
             targetPackage     指定生成的model生成所在的包名
             targetProject     指定在该项目下所在的路径
         -->
-        <javaModelGenerator targetPackage="com.zhuge.domain" targetProject="./src/main/java">
+        <javaModelGenerator targetPackage="com.zhuge.springbootlearn.swagger.domain"
+                            targetProject="./src/main/java">
             <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
             <property name="enableSubPackages" value="false"/>
             <!-- 是否对model添加 构造函数 -->
@@ -48,7 +49,8 @@
         </javaModelGenerator>
 
         <!--mapper xml映射文件生成所在的目录 为每一个数据库的表生成对应的SqlMap文件 -->
-        <sqlMapGenerator targetPackage="mappers" targetProject="./src/main/resources">
+        <sqlMapGenerator targetPackage="mappers"
+                         targetProject="./src/main/resources">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
@@ -59,13 +61,15 @@
         -->
 
         <!-- targetPackage：dao层mapper接口生成的位置 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zhuge.dao" targetProject="./src/main/java">
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.zhuge.springbootlearn.swagger.dao"
+                             targetProject="./src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
         <!-- 配置表格映射 -->
-        <table tableName="account" domainObjectName="Account"
+        <table tableName="goods" domainObjectName="Goods"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"

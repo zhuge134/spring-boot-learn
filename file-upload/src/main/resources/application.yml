@@ -1,0 +1,5 @@
+server:
+  port: 8080
+  address: localhost
+file-service:
+  rootDir: D:/zhuge/

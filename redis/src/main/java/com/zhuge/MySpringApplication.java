@@ -2,7 +2,6 @@ package com.zhuge;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -14,8 +13,8 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 
 /**
- * @Title: MySpringApplication
- * @Description:
+ * @Title:
+ * @Description:MySpringApplication
  * @author: zhuge
  * @date: 2018/12/30 20:09
  */
