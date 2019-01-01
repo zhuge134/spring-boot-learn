@@ -1,12 +1,20 @@
-package com.zhuge.springbootlearn.swagger.domain;
+package com.zhuge.springbootlearn.formprocess.domain;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 
 public class Goods {
+
     private Integer id;
 
+    @NotNull
+    @Size(min = 10,max = 128)
     private String name;
 
+    @NotNull
+    @Min(10)
     private BigDecimal price;
 
     private String picture;
@@ -52,5 +60,15 @@ public class Goods {
 
     public void setPicture(String picture) {
         this.picture = picture == null ? null : picture.trim();
+    }
+
+    @Override
+    public String toString() {
+        return "Goods{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", picture='" + picture + '\'' +
+                '}';
     }
 }

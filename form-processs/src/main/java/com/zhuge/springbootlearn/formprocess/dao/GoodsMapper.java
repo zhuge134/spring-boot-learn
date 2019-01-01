@@ -1,6 +1,8 @@
-package com.zhuge.springbootlearn.swagger.dao;
+package com.zhuge.springbootlearn.formprocess.dao;
 
-import com.zhuge.springbootlearn.swagger.domain.Goods;
+import com.zhuge.springbootlearn.formprocess.domain.Goods;
+
+import java.util.List;
 
 public interface GoodsMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +16,6 @@ public interface GoodsMapper {
     int updateByPrimaryKeySelective(Goods record);
 
     int updateByPrimaryKey(Goods record);
+
+    List<Goods> queryAll();
 }

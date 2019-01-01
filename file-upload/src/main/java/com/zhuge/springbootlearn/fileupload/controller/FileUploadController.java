@@ -22,8 +22,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
+/*@RestController*/
 @Controller
 @RequestMapping(path = "/fileUpload")
 @Api(description = "description",

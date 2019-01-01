@@ -1,0 +1,6 @@
+mybatis:
+  type-aliases-package: com.zhuge.springbootlearn.formprocess.domain
+  mapper-locations: classpath*:mappers/*.xml
+spring:
+  profiles:
+    active: dev

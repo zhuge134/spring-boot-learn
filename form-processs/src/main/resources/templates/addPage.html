@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>AddGoods</title>
+</head>
+<body>
+<div>
+    <form title="add a goods" method="post"
+          enctype="application/x-www-form-urlencoded" action="/goods/add">
+        <table>
+            <tr>
+                <td>name:</td>
+                <td><input type="text" name="name"/></td>
+            </tr>
+            <tr>
+                <td>price:</td>
+                <td><input type="text" name="price" th:default="10.0"/></td>
+            </tr>
+            <tr>
+                <td>picture:</td>
+                <td><input name="picture" type="text"/></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+            </tr>
+            <tr>
+                <td><input type="date"/></td>
+            </tr>
+            <tr>
+                <td>hidden: </td>
+                <td><input type="hidden"/></td>
+            </tr>
+            <tr>
+                <td><input type="color"/></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submit"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

@@ -14,6 +14,9 @@
         <module>redis</module>
         <module>swagger</module>
         <module>file-upload</module>
+        <module>schedule-task</module>
+        <module>form-validate</module>
+        <module>form-processs</module>
     </modules>
 
     <properties>
@@ -26,12 +29,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
-
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
@@ -104,6 +101,17 @@
                 <artifactId>jackson-annotations</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
+            <!--<dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>5.4.1.Final</version>
+            </dependency>-->
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-el</artifactId>
+                <version>8.5.20</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
